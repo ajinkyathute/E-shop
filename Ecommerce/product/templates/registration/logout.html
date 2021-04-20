@@ -1,0 +1,10 @@
+{% extends 'product/base.html'%}
+
+{% block content %}
+<h1>Successfully logged out!</h1>
+
+<form class="{% url 'logout'%}"  method="POST">
+  {% csrf_token %}
+  {{form.as_p}}
+</form>
+{% endblock %}
